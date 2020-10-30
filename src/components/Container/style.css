@@ -1,0 +1,9 @@
+.container {
+  padding: 10px;
+  background: #ECEFF1;
+  width: 100%;
+  /* padding: 20px; */
+  /* justify-content: space-around; */
+  /* align-content: flex-start; */
+  /* overflow: auto; */
+}

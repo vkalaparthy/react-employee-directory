@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "firstName": "Joe",
+    "lastName": "Comey",
+    "role": "Manager",
+    "phoneNumber": "919-123-4001",
+    "email": "jcomey@wonderfulWorld.com" 
+  },
+  {
+    "id": "2",
+    "firstName": "Amy",
+    "lastName": "Bradford",
+    "role": "Project manager",
+    "phoneNumber": "919-123-4002",
+    "email": "abradf@wonderfulWorld.com" 
+  },
+  {
+    "id": "3",
+    "firstName": "Mathew",
+    "lastName": "Reed",
+    "role": "Software Engineer",
+    "phoneNumber": "919-123-4003",
+    "email": "mreed@wonderfulWorld.com" 
+  },
+  {
+    "id": "4",
+    "firstName": "Mary",
+    "lastName": "Kay",
+    "role": "Software Engineer",
+    "phoneNumber": "919-123-4004",
+    "email": "mkay@wonderfulWorld.com" 
+  },
+  {
+    "id": "5",
+    "firstName": "Jim",
+    "lastName": "Lee",
+    "role": "Test Engineer",
+    "phoneNumber": "919-123-4005",
+    "email": "jlee@wonderfulWorld.com" 
+  }
+]
