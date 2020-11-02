@@ -7,17 +7,22 @@ function EmployeesTable(props) {
       <thead className="thead-dark">
         <tr>
           <th scope="col">#</th>
-          <th scope="col" >First Name</th>
-          <th scope="col">Last Name</th>
-          <th scope="col">Role</th>
-          <th scope="col">Phone</th>
-          <th scope="col">Email</th>
+          <th scope="col" key="firstName">
+            <span className="sort" onClick={() => props.sortByFirstName()}> First Name </span>
+          </th>
+          <th scope="col" key="lastName">
+            <span className="sort" onClick={() => props.sortByLastName()}> Last Name </span>
+          </th>
+          <th scope="col" key="role">Role</th>
+          <th scope="col" key="phone">Phone</th>
+          <th scope="col" key="email">Email</th>
         </tr>
       </thead>
       <tbody>
         {props.employees.map(emp => (
-          <tr>
-          <th scope="row">{emp.id}</th>
+          <tr key={emp.id}>
+          {/* <th scope="row" key={emp.id} onClick={() => props.showOnly(emp.id)}>{emp.id}</th> */}
+          <th scope="row" key={emp.id} onClick={() => props.showOnly(emp.id)}>{emp.id}</th>
           <td>{emp.firstName}</td>
           <td>{emp.lastName}</td>
           <td>{emp.role}</td>

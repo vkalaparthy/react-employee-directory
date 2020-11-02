@@ -2,3 +2,12 @@ table {
   width: 100%;
   padding: 2px;
 }
+
+table > thead > .sort {
+  color: #ff1744;
+  font-size: 48px;
+  position: absolute;
+  top: -20px;
+  right: 5px;
+  cursor: pointer;
+}
