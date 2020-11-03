@@ -9,7 +9,16 @@ class App extends Component {
   state = {
     show: false,
     empid: 0,
-    employees
+    employees,
+    roles: []
+  }
+
+  componentDidMount() {
+    let roleArray = [];
+    this.state.employees.forEach(emp => {
+      roleArray.push(emp.role);
+    });
+    this.setState({ roles: [...new Set(roleArray)]});
   }
 
   // Sort the employees by first name
@@ -83,6 +92,16 @@ class App extends Component {
     this.setState({ show: false });
   };
 
+  showOnlyOfRole = (value) => {
+    // console.log("Show only Role based: " + value);
+    let allEmployees = employees;
+    this.setState({ employees: allEmployees });
+    if ( value !== "All" ) {
+      const newEmpList = allEmployees.filter(emp => emp.role === value);
+      this.setState({ employees: newEmpList });
+    }
+  };
+
   render() {
     return (
       <Container>
@@ -90,10 +109,12 @@ class App extends Component {
         {!this.state.show && (
           <EmployeeTable
             employees={this.state.employees}
+            roles={this.state.roles}
             sortByFirstNameAscend={this.sortByFirstNameAscend}
             sortByFirstNameDesc={this.sortByFirstNameDesc}
             sortByLastNameAscend={this.sortByLastNameAscend}
             sortByLastNameDesc={this.sortByLastNameDesc}
+            showOnlyOfRole={this.showOnlyOfRole}
             sortById={this.sortById}
             showCard={this.showCard}
           />

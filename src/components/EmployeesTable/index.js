@@ -15,7 +15,18 @@ function EmployeesTable(props) {
             <span className="sort" onClick={() => props.sortByLastNameAscend()}> &#9650; </span>
             <span className="sort" onClick={() => props.sortByLastNameDesc()}> &#9660; </span>
           </th>
-          <th scope="col" key="role"> Role </th>
+          <th scope="col" key="role"> 
+          <div>
+              <div> 
+                <select onChange={(event) => props.showOnlyOfRole(event.target.value)}>
+                  <option value="All" key="all" >All</option>
+                  {props.roles.map(role => (
+                    <option value={role} key={role}>{role}</option>
+                  ))}
+                </select>
+              </div>
+            </div>
+          </th>
           {/* <th scope="col" key="phone">Phone</th>
           <th scope="col" key="email">Email</th> */}
         </tr>
