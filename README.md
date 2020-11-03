@@ -16,7 +16,7 @@ Employee directory using React library for an enhanced user experience.
 This application is located in GitHub at https://github.com/vkalaparthy/react-employee-directory. 
 
 ## Usage
-Clone the repository https://github.com/vkalaparthy/workout-tracker and run "npm install" to get the node_modules for all the dependencies.  Run "npm start" and use the app. You can change the employees.json based on any date, for this app, I have just used a file.The application in loacalhost will look like this:  
+Clone the repository https://github.com/vkalaparthy/workout-tracker and run "npm install" to get the node_modules for all the dependencies.  Run "npm start" and use the app. You can change the employees.json based on any data, for this app, I have just used a file.The application in loacalhost will look like this:  
 
 ![firstPage](./public/assets/EmpList.JPG)  
   
