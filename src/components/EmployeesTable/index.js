@@ -6,7 +6,7 @@ function EmployeesTable(props) {
     <table className="table">
       <thead className="thead-dark">
         <tr>
-          <th scope="col">#</th>
+          <th scope="col" className="sort" onClick={() => props.sortById()}>#</th>
           <th scope="col" key="firstName">
             <span className="sort" onClick={() => props.sortByFirstName()}> First Name </span>
           </th>
@@ -20,10 +20,10 @@ function EmployeesTable(props) {
       </thead>
       <tbody>
         {props.employees.map(emp => (
-          <tr key={emp.id}>
+          <tr key={emp.id} onClick={() => props.showCard(emp.id)}>
           {/* <th scope="row" key={emp.id} onClick={() => props.showOnly(emp.id)}>{emp.id}</th> */}
-          <th scope="row" className="index" key={emp.id} onClick={() => props.showCard(emp.id)}>{emp.id}</th>
-          <td onClick={() => props.showCard(emp.id)}>{emp.firstName}</td>
+          <th scope="row">{emp.id}</th>
+          <td>{emp.firstName}</td>
           <td>{emp.lastName}</td>
           <td>{emp.role}</td>
           {/* <td>{emp.phoneNumber}</td>

@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css";
 
 function ShowCard(props) {
-  console.log(props.emp[0].firstName);
+  
   return (
     <div className="card">
       <div className="card-header">
