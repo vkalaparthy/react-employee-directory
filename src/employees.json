@@ -38,5 +38,13 @@
     "role": "Test Engineer",
     "phoneNumber": "919-123-4005",
     "email": "jlee@wonderfulWorld.com" 
+  },
+  {
+    "id": "6",
+    "firstName": "Vani",
+    "lastName": "Kalapar",
+    "role": "Architect",
+    "phoneNumber": "919-123-4006",
+    "email": "vkalap@wonderfulWorld.com" 
   }
 ]

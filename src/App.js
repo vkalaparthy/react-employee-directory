@@ -2,11 +2,14 @@ import React, { Component } from "react";
 import EmployeeTable from './components/EmployeesTable';
 import Container from './components/Container';
 import Title from './components/Title';
+import ShowCard from './components/ShowCard';
 import employees from './employees.json';
 // import './App.css';
 
 class App extends Component {
   state = {
+    show: false,
+    empid: 0,
     employees
   }
 
@@ -41,24 +44,47 @@ class App extends Component {
   };
 
   // Show single employee
-  showOnly = (id) => {
-    console.log("In showOnly id=" + id);
-    const employee = this.state.employees.filter(emp => emp.id === id);
-    console.log(employee);
-    this.setState({ employees: employee });
-    console.log(this.state.employees);
+  // showOnly = (id) => {
+  //   console.log("In showOnly id=" + id);
+  //   const employee = this.state.employees.filter(emp => emp.id === id);
+  //   console.log(employee);
+  //   this.setState({ employees: employee });
+  //   console.log(this.state.employees);
+  // };
+
+  showCard = (id) => {
+    console.log(id);
+    // this.setState({ show: !this.state.show });
+    this.setState({ show: true });
+    //console.log("made the state true");
+    console.log(this.state.show);
+    // const employee = this.state.employees.filter(emp => emp.id === id);
+    this.setState({ empid: id });
+    console.log(this.state.empid);
+  };
+
+  closeCard = () => {
+    this.setState({ show: false });
   };
 
   render() {
     return (
       <Container>
         <Title>Employees List</Title>
-        <EmployeeTable
-          employees={employees}
-          sortByFirstName={this.sortByFirstName}
-          sortByLastName={this.sortByLastName}
-          showOnly={this.showOnly}
-        />
+        {!this.state.show && (
+          <EmployeeTable
+            employees={this.state.employees}
+            sortByFirstName={this.sortByFirstName}
+            sortByLastName={this.sortByLastName}
+            showCard={this.showCard}
+          />
+        )}
+        {this.state.show && (
+          <ShowCard
+            emp={this.state.employees.filter(emp => emp.id === this.state.empid)}
+            closeCard={this.closeCard}
+          />
+        )}
       </Container>
 
     )
