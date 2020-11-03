@@ -11,7 +11,3 @@ table > thead > .sort {
   right: 5px;
   cursor: pointer;
 }
-
-table > tbody > .index {
-  cursor: pointer;
-}

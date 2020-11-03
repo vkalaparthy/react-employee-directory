@@ -13,7 +13,7 @@ class App extends Component {
   }
 
   // Sort the employees by first name
-  sortByFirstName = () => {
+  sortByFirstNameAscend = () => {
     // console.log("In sort By first Name");
 
     let emps = this.state.employees;
@@ -27,13 +27,37 @@ class App extends Component {
     this.setState({ employees: emps });
   };
 
+  sortByFirstNameDesc = () => {
+    // console.log("In sort By first Name");
+
+    let emps = this.state.employees;
+    // emps.sort(sortByProperty("firstName"));
+
+    emps.sort(function (a, b) {
+      return b.firstName.localeCompare(a.firstName);
+    })
+    // emps.sort();
+    console.log(emps);
+    this.setState({ employees: emps });
+  };
+
   // Sort the employees by last name
-  sortByLastName  = () => {
+  sortByLastNameAscend  = () => {
 
     let emps = this.state.employees;
 
     emps.sort(function (a, b) {
       return a.lastName.localeCompare(b.lastName);
+    })
+    this.setState({ employees: emps });
+  };
+
+  sortByLastNameDesc  = () => {
+
+    let emps = this.state.employees;
+
+    emps.sort(function (a, b) {
+      return b.lastName.localeCompare(a.lastName);
     })
     this.setState({ employees: emps });
   };
@@ -66,8 +90,10 @@ class App extends Component {
         {!this.state.show && (
           <EmployeeTable
             employees={this.state.employees}
-            sortByFirstName={this.sortByFirstName}
-            sortByLastName={this.sortByLastName}
+            sortByFirstNameAscend={this.sortByFirstNameAscend}
+            sortByFirstNameDesc={this.sortByFirstNameDesc}
+            sortByLastNameAscend={this.sortByLastNameAscend}
+            sortByLastNameDesc={this.sortByLastNameDesc}
             sortById={this.sortById}
             showCard={this.showCard}
           />

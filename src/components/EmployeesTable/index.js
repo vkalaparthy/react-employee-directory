@@ -6,14 +6,16 @@ function EmployeesTable(props) {
     <table className="table">
       <thead className="thead-dark">
         <tr>
-          <th scope="col" className="sort" onClick={() => props.sortById()}>#</th>
-          <th scope="col" key="firstName">
-            <span className="sort" onClick={() => props.sortByFirstName()}> First Name </span>
+          <th scope="col" className="sort" onClick={() => props.sortById()}> # </th>
+          <th scope="col" key="firstName"> First Name 
+            <span className="sort mp-4" onClick={() => props.sortByFirstNameAscend()}> &#9650; </span>
+            <span className="sort mp-4" onClick={() => props.sortByFirstNameDesc()}> &#9660; </span>
           </th>
-          <th scope="col" key="lastName">
-            <span className="sort" onClick={() => props.sortByLastName()}> Last Name </span>
+          <th scope="col" key="lastName"> Last Name
+            <span className="sort" onClick={() => props.sortByLastNameAscend()}> &#9650; </span>
+            <span className="sort" onClick={() => props.sortByLastNameDesc()}> &#9660; </span>
           </th>
-          <th scope="col" key="role">Role</th>
+          <th scope="col" key="role"> Role </th>
           {/* <th scope="col" key="phone">Phone</th>
           <th scope="col" key="email">Email</th> */}
         </tr>
