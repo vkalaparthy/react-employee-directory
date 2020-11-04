@@ -105,7 +105,7 @@ class App extends Component {
   render() {
     return (
       <Container>
-        <Title>Employees List</Title>
+        <Title>Employee Directory</Title>
         {!this.state.show && (
           <EmployeeTable
             employees={this.state.employees}
