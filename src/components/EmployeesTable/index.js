@@ -18,8 +18,7 @@ function EmployeesTable(props) {
           <th scope="col" key="role"> 
           <div>
               <div> 
-                <select onChange={(event) => props.showOnlyOfRole(event.target.value)}>
-                  <option value="All" key="all" >All</option>
+                <select value={props.select} onChange={(event) => props.showOnlyOfRole(event.target.value)}>
                   {props.roles.map(role => (
                     <option value={role} key={role}>{role}</option>
                   ))}
@@ -27,20 +26,15 @@ function EmployeesTable(props) {
               </div>
             </div>
           </th>
-          {/* <th scope="col" key="phone">Phone</th>
-          <th scope="col" key="email">Email</th> */}
         </tr>
       </thead>
       <tbody>
         {props.employees.map(emp => (
           <tr key={emp.id} onClick={() => props.showCard(emp.id)}>
-          {/* <th scope="row" key={emp.id} onClick={() => props.showOnly(emp.id)}>{emp.id}</th> */}
           <th scope="row">{emp.id}</th>
           <td>{emp.firstName}</td>
           <td>{emp.lastName}</td>
           <td>{emp.role}</td>
-          {/* <td>{emp.phoneNumber}</td>
-          <td>{emp.email}</td> */}
         </tr>
         ))}
       </tbody>

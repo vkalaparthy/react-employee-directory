@@ -10,18 +10,19 @@ class App extends Component {
     show: false,
     empid: 0,
     employees,
-    roles: []
+    roles: ["All"],
+    select: "All"
   }
 
   componentDidMount() {
-    let roleArray = [];
+    let roleArray = this.state.roles;
     this.state.employees.forEach(emp => {
       roleArray.push(emp.role);
     });
     this.setState({ roles: [...new Set(roleArray)]});
   }
 
-  // Sort the employees by first name
+  // Sort the employees by first name in ascending order
   sortByFirstNameAscend = () => {
     // console.log("In sort By first Name");
 
@@ -36,11 +37,9 @@ class App extends Component {
     this.setState({ employees: emps });
   };
 
+  // Sort the employees by first name in descending order
   sortByFirstNameDesc = () => {
-    // console.log("In sort By first Name");
-
     let emps = this.state.employees;
-    // emps.sort(sortByProperty("firstName"));
 
     emps.sort(function (a, b) {
       return b.firstName.localeCompare(a.firstName);
@@ -50,9 +49,8 @@ class App extends Component {
     this.setState({ employees: emps });
   };
 
-  // Sort the employees by last name
+  // Sort the employees by last name in ascending order
   sortByLastNameAscend  = () => {
-
     let emps = this.state.employees;
 
     emps.sort(function (a, b) {
@@ -61,8 +59,8 @@ class App extends Component {
     this.setState({ employees: emps });
   };
 
+  // Sort the employees by last name in descending order
   sortByLastNameDesc  = () => {
-
     let emps = this.state.employees;
 
     emps.sort(function (a, b) {
@@ -71,6 +69,7 @@ class App extends Component {
     this.setState({ employees: emps });
   };
 
+  // Sorting the rows by id
   sortById = () => {
     // console.log("In sortById");
     let emps = this.state.employees;
@@ -81,20 +80,22 @@ class App extends Component {
     this.setState({ employees: emps });
   };
 
+  // Show card is to enable required parameters
   showCard = (id) => {
-    // console.log(id);
-    // this.setState({ show: !this.state.show });
     this.setState({ show: true });
     this.setState({ empid: id });
   };
 
+  // reset the parameters
   closeCard = () => {
     this.setState({ show: false });
   };
 
+  // Show employees of a certain role
   showOnlyOfRole = (value) => {
     // console.log("Show only Role based: " + value);
     let allEmployees = employees;
+    this.setState({ select: value })
     this.setState({ employees: allEmployees });
     if ( value !== "All" ) {
       const newEmpList = allEmployees.filter(emp => emp.role === value);
@@ -110,6 +111,7 @@ class App extends Component {
           <EmployeeTable
             employees={this.state.employees}
             roles={this.state.roles}
+            select={this.state.select}
             sortByFirstNameAscend={this.sortByFirstNameAscend}
             sortByFirstNameDesc={this.sortByFirstNameDesc}
             sortByLastNameAscend={this.sortByLastNameAscend}
