@@ -16,7 +16,7 @@ Employee directory using React library for an enhanced user experience.
 This application is located in GitHub at https://github.com/vkalaparthy/react-employee-directory.   The application is deployed [here](https://vkalaparthy.github.io/react-employee-directory/).
 
 ## Usage
-Clone the repository https://github.com/vkalaparthy/workout-tracker and run "npm install" to get the node_modules for all the dependencies.  Run "npm start" and use the app. You can change the employees.json based on any data, for this app, I have just used a file. This application can:  
+Clone the repository https://github.com/vkalaparthy/react-employee-directory and run "npm install" to get the node_modules for all the dependencies.  Run "npm start" and use the app. You can change the employees.json based on any data, for this app, I have just used a file. This application can:  
 Sort the first name and last name in ascending or descending order  
 Sort the rows based on id  
 Show only one employee when clicked on the any part of employee row in the table  
