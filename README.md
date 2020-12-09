@@ -1,7 +1,7 @@
 # react-employee-directory
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
 
-A directory to access your employees details.
+A directory to access employees details.
 
 ## Table of Contents
 * [General Info](#general-info)
