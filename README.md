@@ -1,21 +1,30 @@
 # react-employee-directory
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
 
-## Description
-Employee directory using React library for an enhanced user experience.
+A directory to access your employees details.
 
 ## Table of Contents
+* [General Info](#general-info)
+* [Technologies](#technologies)
 * [Installation](#installation)
-* [Usage](#usage)
+* [How to Use](#usage)
+* [Application Demo](#application-demo)
 * [License](#license)
-* [Contributing](#contributing)
-* [Tests](#tests)
-* [Questions](#questions)
+* [Contact](#contact)
+
+## General Info
+An application that provided employees information with an enhanced User Experience.
+
+## Technologies
+* React
+* HTML
+* CSS
+* JSON
 
 ## Installation
 This application is located in GitHub at https://github.com/vkalaparthy/react-employee-directory.   The application is deployed [here](https://vkalaparthy.github.io/react-employee-directory/).
 
-## Usage
+## How to Use
 Clone the repository https://github.com/vkalaparthy/react-employee-directory and run "npm install" to get the node_modules for all the dependencies.  Run "npm start" and use the app. You can change the employees.json based on any data, for this app, I have just used a file. This application can:  
 Sort the first name and last name in ascending or descending order  
 Sort the rows based on id  
@@ -27,20 +36,18 @@ The application in loacalhost will look like this:
 ![firstPage](./public/assets/EmpList.JPG)  
   
 
-Demo:  
+## Application Demo
 
 ![demo](./public/assets/ReactApp.gif) 
   
-Demo2:  
+
 ![demo2](./public/assets/ReactApp2.gif) 
 
 
 ## License
 Copyright © 2020-present, Vani Kalaparthy. Released under the MIT License.
-## Contributing
-## Tests
 
-## Questions
+## Contact
 * Vani Kalaparthy
   * https://github.com/vkalaparthy
   * kalaparthy.vani@gmail.com
